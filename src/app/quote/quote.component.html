@@ -3,10 +3,17 @@
 <div class="container-fluid">
     <h1 class="text-center">Quotes-Hub</h1>
     <hr>
-    <ol>
-      <li *ngFor = 'let quote of quote;let i = index'>
-        {{ quote.name }} <br> <br> posted on {{quote.completeDate|date}}
-        <app-quote-detail *ngIf = 'quote.showAuthor' [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-      </li>
-    </ol>
-  </div>
+    <div class="row">
+      <div class="col-md-6">
+        <ol>
+          <li *ngFor = 'let quote of quote;let i = index'>
+            {{ quote.name }} <br> <br> posted on {{quote.completeDate|date}}
+            <app-quote-detail *ngIf = 'quote' [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+          </li>
+        </ol>
+      </div>
+      <div class="col-md-6">
+        <app-quote-form></app-quote-form>
+      </div>
+    </div>
+</div>
