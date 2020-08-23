@@ -1,15 +1,35 @@
 <div class="container-fluid">
     <h2 class="text-center">Submit a Quote</h2>
     <br>
-    <form action="">
+    <form (ngSubmit)='submitQuotes()' #quoteForm='ngForm' action="">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name">
+            <input type="text" class="form-control" id="name" [(ngModel)]="newQuotes.author" name="author" #author='ngModel' required>
+
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+
+                <p>Author Names is required</p>
+
+            </div>
+
+            <!-- Should be able to add user input in real life -->
+
+            {{newQuotes.author}}
         </div>
 
         <div class="form-group">
             <label for="quote">Quote</label>
-            <textarea  id="quote" rows="4" class="form-control" required placeholder="Compose your quote here"></textarea>
+            <textarea  id="quote" rows="4" class="form-control" placeholder="Compose your quote here" [(ngModel)]="newQuotes.name" name="name" #name='ngModel' required></textarea>
+
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+
+                <p>Author Quote is required</p>
+
+            </div>
+
+            <!-- Should be able to add user input in real life -->
+
+            {{newQuotes.name}}
         </div>
 
         <div class="form-group">
