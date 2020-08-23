@@ -4,10 +4,9 @@
     <h1 class="text-center">Quotes-Hub</h1>
     <hr>
     <ol>
-      <li *ngFor = 'let quote of quote'>
-        {{ quote.name }}
-        
-        <app-quote-detail [quote] = 'quote'></app-quote-detail>
+      <li *ngFor = 'let quote of quote;let i = index'>
+        {{ quote.name }} <br> <br> posted on {{quote.completeDate|date}}
+        <app-quote-detail *ngIf = 'quote.showAuthor' [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
       </li>
     </ol>
   </div>
