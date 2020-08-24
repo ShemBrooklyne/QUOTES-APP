@@ -9,8 +9,6 @@ import { Quotes } from '../quotes';
 export class QuoteComponent implements OnInit {
 
   quote:Quotes[] = [
-    new Quotes ('Build in silence and let your success make the noise for you','Brooklyne', new Date(2020,7,21)),
-    new Quotes ('There is always light at the end of the tunnel. Never lose focus!', 'Shem', new Date(2020,4,12)),
     new Quotes ('Never stop dreaming. A dream is what it takes to achieve.', 'Montgamery', new Date(2010,4,5)),
     new Quotes ('Act as if what you do makes a difference. It does.', 'William James', new Date(2006,7,8)),
     new Quotes ('Success is not final, failure is not fatal: it is the courage to continue that counts.', 'Winston Churchill', new Date(1985,2,1)),
