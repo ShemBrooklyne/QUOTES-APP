@@ -4,3 +4,25 @@ export class Quotes {
         this.showAuthor = false;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

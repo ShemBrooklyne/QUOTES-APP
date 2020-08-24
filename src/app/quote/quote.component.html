@@ -1,19 +1,18 @@
 <!-- <p>quote works!</p> -->
-
 <div class="container-fluid">
-    <h1 class="text-center">Quotes-Hub</h1>
-    <hr>
-    <div class="row">
-      <div class="col-md-6">
-        <ul>
-          <li *ngFor = 'let quote of quote;let i = index'>
-            {{ quote.name }} <br> <br> posted on {{quote.completeDate|date}}
-            <app-quote-detail *ngIf = 'quote' [quote] = 'quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-6 myform">
-        <app-quote-form (addQuotes)="addNewQuote($event)"></app-quote-form>
-      </div>
+  <h1 class="text-center">Quotes-Hub</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <ul>
+        <li *ngFor='let quote of quote;let i = index'>
+          {{ quote.name }} <br> <br> posted on {{quote.completeDate|date}}
+          <app-quote-detail *ngIf='quote' [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-detail>
+        </li>
+      </ul>
     </div>
+    <div class="col-md-6 myform">
+      <app-quote-form (addQuotes)="addNewQuote($event)"></app-quote-form>
+    </div>
+  </div>
 </div>

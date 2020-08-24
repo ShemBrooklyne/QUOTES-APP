@@ -33,3 +33,21 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span').textContent).toContain('Quotes-App app is running!');
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
