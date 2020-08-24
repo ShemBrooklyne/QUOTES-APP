@@ -1,5 +1,6 @@
-<div class="container-fluid">
+<div class="container-fluid myForm">
     <h2 class="text-center">Submit a Quote</h2>
+    <hr>
     <br>
     <form (ngSubmit)='submitQuotes()' #quoteForm='ngForm' action="">
         <div class="form-group">
@@ -14,12 +15,12 @@
 
             <!-- Should be able to add user input in real life -->
 
-            {{newQuotes.author}}
+            <!-- {{newQuotes.author}} -->
         </div>
 
         <div class="form-group">
             <label for="quote">Quote</label>
-            <textarea  id="quote" rows="4" class="form-control" placeholder="Compose your quote here" [(ngModel)]="newQuotes.name" name="name" #name='ngModel' required></textarea>
+            <textarea  id="quote" rows="8" class="form-control" placeholder="Compose your quote here" [(ngModel)]="newQuotes.name" name="name" #name='ngModel' required></textarea>
 
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
 
@@ -29,11 +30,13 @@
 
             <!-- Should be able to add user input in real life -->
 
-            {{newQuotes.name}}
+            <!-- {{newQuotes.name}} -->
         </div>
 
         <div class="form-group">
-            <button type="submit" class="btn btn-success">Post</button>            
+            <button type="submit"class="btn btn-success">Post</button>            
         </div>
     </form>
+
+
 </div>
